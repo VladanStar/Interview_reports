@@ -1,6 +1,12 @@
 import { Fragment, useState } from "react";
-import { getToken } from "../services/functions";
+import { getToken } from "./services/functions";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./app/components/header/Header";
+import  Footer  from "./app/components/footer/Footer";
+import Login  from "./app/components/main-page/login-form";
+import Home from "./app/components/main-page/Home";
+import CandidateReport from "../app/components/main-page/candidates";
+
 
 const App = () => {
   const [token, setToken] = useState(sessionStorage.getItem("token"));
