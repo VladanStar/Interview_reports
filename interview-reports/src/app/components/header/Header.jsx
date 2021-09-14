@@ -1,16 +1,24 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
-
-
 const Header = () => {
   return (
-    <Container fluid className="bg-primary py-2">
-      <Container className="d-flex justify-content-between px-3">
-        <h3 className="text-white">Interview Reports</h3>
-        <Button className="text-primary bg-light">Candidates</Button>
-      </Container>
-    </Container>
+    <header>
+      <div className="navbar-fixed">
+        <nav>
+          <div className="nav-wrapper bg-primary">
+            <a href="index.html" className="brand-logo">Link to index.js?</a>
+            <a href="sass.html" className="brand-logo">
+              Interview Book
+            </a>
+            <ul className=" right hide-on-med-and-down">
+              <li>
+                <a href="index.html">Login</a>
+                <a href="sass.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
   );
 };
-
 export default Header;
