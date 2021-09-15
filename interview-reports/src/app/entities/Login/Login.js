@@ -1,13 +1,9 @@
 import React from "react";
+import "./Login"
 
-const Login = ({
-  submit,
-  email,
-  password,
-  onChangeEmail,
-  onChangePassword,
-}) => {
-  return (
+const Login = ({ submit, email, password, onChangeEmail, onChangePassword }) => {
+
+   return (
     <main>
       <form>
         <input
@@ -22,7 +18,7 @@ const Login = ({
           value={password}
           onChange={onChangePassword}
         />
-        <button>Back</button>
+        <button>Back to</button>
         <button onClick={submit}>Submit</button>
       </form>
     </main>
