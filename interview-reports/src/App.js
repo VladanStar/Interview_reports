@@ -1,11 +1,11 @@
 import { Fragment, useState } from "react";
-import { getToken } from "./services/functions";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Footer  from "./app/components/footer/Footer";
 import Header from "./app/components/header/Header";
-import  Footer  from "./app/components/footer/Footer";
-import Login  from "./app/components/main-page/login-form";
-import Home from "./app/components/main-page/Home";
-import CandidateReport from "../app/components/main-page/candidates";
+import Home from "./app/entities/Home/Home";
+import Login  from "./app/entities/Login/Login";
+import getToken  from "./services/Login";
+import Candidate from "../app/entities/Candidate/Candidate";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 const App = () => {

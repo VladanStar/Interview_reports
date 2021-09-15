@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
 import FilterUser from "../../../../Data/FilteredUsers";
-import SearchBar from "../../../components/SeachBar/SearchBar";
+import SearchBar from "../../../components/SearchBar/SearchBar";
 import "./Candidate.css";
 
 const CandidatesUI = ({ candidates, value, search }) => {
