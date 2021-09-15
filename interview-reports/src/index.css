@@ -9,5 +9,26 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  
     monospace;
 }
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+a{
+  text-decoration: none !important;
+}
+.imgH{
+  transition: all 1s ease;
+}
+.imgH:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}  

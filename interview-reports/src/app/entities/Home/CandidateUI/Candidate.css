@@ -1,0 +1,9 @@
+img {
+    width: 100% !important;
+  }
+  .radiusShadow {
+    width: 20rem;
+    border-radius: 10%;
+    -webkit-box-shadow: 2px 3px 10px 9px #2792ad; 
+  box-shadow: 2px 3px 10px 9px #2792ad;
+  } 
