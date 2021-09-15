@@ -49,7 +49,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path={"/"} component={Home} />
-          <Route path={"/candidateReport"} component={CandidateReport} />
+          <Route path={"/candidate/:id"} component={Candidate} />
         </Switch>
 
         <Footer />
