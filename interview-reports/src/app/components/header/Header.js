@@ -1,4 +1,5 @@
 import React from "react";
+import "../header/Header.css"
 
 const Header = () => {
   return (
@@ -6,13 +7,13 @@ const Header = () => {
       <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper bg-primary">
+            <ul>
             <a href="#!" className="brand-logo">
               Interview Book
             </a>
+            </ul>
             <ul className=" right hide-on-med-and-down">
-              <li>
                 <a href="sass.html">Login</a>
-              </li>
             </ul>
           </div>
         </nav>
