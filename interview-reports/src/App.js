@@ -4,7 +4,7 @@ import Header from "./app/components/header/Header";
 import Home from "./app/entities/Home/Home";
 import Login  from "./app/entities/Login/Login";
 import getToken  from "./services/Login";
-import Candidate from "../app/entities/Candidate/Candidate";
+import Candidate from "../src/app/entities/Candidate/Candidate";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
