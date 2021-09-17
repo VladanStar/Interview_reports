@@ -5,6 +5,7 @@ import SetDate from "../../../Data/SetDate";
 import "./SingleCandidate.css";
 import Modalset from "../../components/modal/Modal";
 
+
 const SingleCandidate = ({ candidate, reports }) => {
   const [isView, setIsView] = useState(false);
   const [modalObj, setModalObj] = useState({});
