@@ -9,7 +9,7 @@ const Home = () => {
   const [candidates, setCandidates] = useState([]);
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(true);
-  const onGetCandidates = () => { 
+  const onGetCandidates = () => {
     const get = async () => {
       const onGetCandidates = await getCandidates(token);
       setCandidates(onGetCandidates);

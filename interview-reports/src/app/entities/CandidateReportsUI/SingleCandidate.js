@@ -3,19 +3,20 @@ import { Container, Row, Col, Table } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import SetDate from "../../../Data/SetDate";
 import "./SingleCandidate.css";
+import Modalset from "../../components/modal/Modal";
 
 const SingleCandidate = ({ candidate, reports }) => {
   const [isView, setIsView] = useState(false);
   const [modalObj, setModalObj] = useState({});
-
+  const closedModal =()=>{
+    setIsView(false)
+  }
+  console.log(modalObj)
   const img =
-    "https://w7.pngwing.com/pngs/340/956/png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper.png";
+    "https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif";
   return (
     <main>
-        {isView && <div>
-            <h1>{modalObj.companyName}</h1>
-            <button onClick={() => {setModalObj({}); setIsView(false)}}>close</button>
-            </div>}
+        {isView && <Modalset modalObj={modalObj} closed={closedModal}/>}
       <Container>
         <Row>
           <Col xs={12} md={12} lg={4}>

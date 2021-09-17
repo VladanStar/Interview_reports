@@ -3,6 +3,7 @@ import getCandidates from "../../../services/getCandidates";
 import getReports from "../../../services/getReport";
 import "./Candidate.css";
 import SingleCandidate from "../CandidateReportsUI/SingleCandidate";
+import Loader from "../../components/Loader/Loader"
 
 const Candidate = ({ match }) => {
   const id = parseInt(match.params.id);
@@ -39,8 +40,8 @@ const Candidate = ({ match }) => {
   useEffect(onGetReports, [token, id]);
   return (
     <Fragment>
-    {loading ? <h1>Loading...</h1> : <SingleCandidate candidate={candidate} reports={reports} />}
-  </Fragment>
+      {loading ? <Loader /> : <SingleCandidate candidate={candidate} reports={reports} />}
+    </Fragment>
   );
 };
 

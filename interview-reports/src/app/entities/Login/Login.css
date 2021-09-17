@@ -10,13 +10,14 @@ form {
     border: 1px solid white;
     border-radius: 20px;
     box-shadow: 1px 2px 41px -7px rgba(0,0,0,0.75);
-    background-color: rgb(25, 102, 102);
+    /*background-color: rgb(25, 102, 102);*/
+    width: 60%;
 }
 
 .input {
     margin: 20px auto;
     /*background-color: red;*/
-    width: 90%;
+    width: 70%;
 }
 
 input {
@@ -38,7 +39,7 @@ input {
     flex-direction: column-reverse;
 }
 
-button {
+.single-button {
     text-align: center;
     width: 50%;
     margin: 5px auto;

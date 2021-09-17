@@ -5,13 +5,15 @@ import Home from "./app/entities/Home/Home";
 import Login  from "./app/entities/Login/Login";
 import getToken  from "./services/Login";
 import Candidate from "../src/app/entities/Candidate/Candidate";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch ,useHistory} from "react-router-dom";
 
 
 const App = () => {
+  let history = useHistory();
   const [token, setToken] = useState(sessionStorage.getItem("token"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLogin, setisLogin] = useState(false);
   const onChangeEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -20,41 +22,48 @@ const App = () => {
   };
   const submit = (e) => {
     const token = async () => {
-      const info = await getToken(email, password);
-      sessionStorage.setItem("token", info.accessToken);
-      setToken(info.accessToken);
+      const data = await getToken(email, password);
+      sessionStorage.setItem("token", data.accessToken);
+      setToken(data.accessToken);
+      setisLogin(true);
+      history.push("/");
+
     };
     token();
     setEmail("");
     setPassword("");
-    e.preventDefault();
+    e.preventDefault(); //probaj bez ovoga!!!
+  };
+  
+  const logOut = () => {
+    sessionStorage.removeItem("token");
+    setisLogin(false);
+    history.push('/login')
   };
 
   if (!token || token === "undefined") {
-    return (
-      <Fragment>
-        <Login
-          submit={submit}
-          email={email}
-          password={password}
-          onChangeEmail={onChangeEmail}
-          onChangePassword={onChangePassword}
-        />
-      </Fragment>
-    );
+    history.push('/login');
   }
+
   return (
-    <BrowserRouter>
       <Fragment>
-        <Header />
+        {isLogin && <Header logOut={logOut} />}
         <Switch>
           <Route exact path={"/"} component={Home} />
           <Route path={"/candidate/:id"} component={Candidate} />
+          <Route exact path="/login">
+            <Login
+              submit={submit}
+              email={email}
+              password={password}
+              onChangeEmail={onChangeEmail}
+              onChangePassword={onChangePassword}
+            />
+          </Route>
         </Switch>
 
-        <Footer />
+        {isLogin && <Footer />}
       </Fragment>
-    </BrowserRouter>
   );
 };
 
