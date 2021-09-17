@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import "./Modal.css";
-import SetDate from "../../../Data/SetDate"
+import SetDate from "../../../Data/SetDate";
 
 const Modalset = ({ modalObj, closed }) => {
     console.log(modalObj)

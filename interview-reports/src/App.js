@@ -32,7 +32,7 @@ const App = () => {
     token();
     setEmail("");
     setPassword("");
-    e.preventDefault(); //probaj bez ovoga!!!
+    e.preventDefault(); 
   };
   
   const logOut = () => {

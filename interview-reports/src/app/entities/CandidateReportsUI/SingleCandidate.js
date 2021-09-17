@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col, Table } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import SetDate from "../../../Data/SetDate";
-import "./SingleCandidate.css";
 import Modalset from "../../components/modal/Modal";
-
+import "./SingleCandidate.css";
 
 const SingleCandidate = ({ candidate, reports }) => {
   const [isView, setIsView] = useState(false);
