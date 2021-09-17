@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import getCandidates from "../../../services/getCandidates";
 import getReports from "../../../services/getReport";
-import "./Candidate.css";
 import SingleCandidate from "../CandidateReportsUI/SingleCandidate";
-import Loader from "../../components/Loader/Loader"
+import Loader from "../../components/Loader/Loader";
+import "./Candidate.css";
+
 
 const Candidate = ({ match }) => {
   const id = parseInt(match.params.id);

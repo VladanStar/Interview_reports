@@ -1,7 +1,7 @@
 import React from "react";
-import "./Header.css";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import {Link} from "react-router-dom";
+import "./Header.css";
 
 const Header = ({ logOut }) => {
   return (
