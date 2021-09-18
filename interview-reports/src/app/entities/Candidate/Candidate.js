@@ -1,49 +1,43 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import getCandidates from "../../../services/getCandidates";
 import getReports from "../../../services/getReport";
-import SingleCandidate from "../CandidateReportsUI/SingleCandidate";
-import Loader from "../../components/Loader/Loader";
 import "./Candidate.css";
-
+import SingleCandidate from "../CandidateReportsUI/SingleCandidate";
+import Loader from "../../components/Loader/Loader"
 
 const Candidate = ({ match }) => {
   const id = parseInt(match.params.id);
-  let history = useHistory()
   const token = sessionStorage.getItem("token");
   const [candidate, setCandidate] = useState({});
   const [reports, setReports] = useState([]);
   const [loading, setLoading] = useState(true);
-  const onGetCandidates = async () => {
-    let candidates = await getCandidates(token);
-    if (candidates === 'jwt expired') {
-      history.push('/login')
-    }
-    candidates.forEach((item) => {
-      if (item.id === id) {
-        setCandidate(item);
-        setLoading(false);
-      }
-    });
+  const onGetCandidates = () => {
+    const get = async () => {
+      const candidates = await getCandidates(token);
+      candidates.forEach((candidate) => {
+        if (candidate.id === id) {
+          setCandidate(candidate);
+        }
+      });
+    };
+    get();
   };
-
-  const onGetReports = async () => {
-    let tempRepots = [];
-    const allReports = await getReports(token);
-    allReports.forEach((item) => {
-      if (item.candidateId === id) {
-        tempRepots.push(item);
-      }
-    });
-    setReports(tempRepots);
-    setLoading(false);
+  const onGetReports = () => {
+    const reports = async () => {
+      let tempRepots = [];
+      const allReports = await getReports(token);
+      allReports.forEach((report) => {
+        if (report.candidateId === id) {
+          tempRepots.push(report);
+        }
+      });
+      setReports(tempRepots);
+      setLoading(false);
+    };
+    reports();
   };
-  useEffect(() => {
-    if (!candidate) {
-      onGetCandidates();
-    }
-    onGetReports()
-  }, []);
+  useEffect(onGetCandidates, [token, id]);
+  useEffect(onGetReports, [token, id]);
   return (
     <Fragment>
       {loading ? <Loader /> : <SingleCandidate candidate={candidate} reports={reports} />}
