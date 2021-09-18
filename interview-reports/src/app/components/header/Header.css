@@ -1,4 +1,7 @@
 .navStyle{
-    background-color: rgb(20, 80, 80);
+    background-color: seagreen;
     text-align: center;
+    color: khaki;
+    padding-left: 10%;
+    padding-right: 10%;
 }
