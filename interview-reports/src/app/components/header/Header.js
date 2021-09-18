@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import "./Header.css";
 
 const Header = ({ logOut }) => {
+  let location = useLocation();
+  if(location.pathname === "/login") {
+     return <div></div>
+  }
   return (
     <header>
       <Navbar className="navStyle" expand="lg">

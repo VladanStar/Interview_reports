@@ -13,7 +13,6 @@ const App = () => {
   const [token, setToken] = useState(sessionStorage.getItem("token"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLogin, setisLogin] = useState(false);
   const onChangeEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -25,7 +24,6 @@ const App = () => {
       const data = await getToken(email, password);
       sessionStorage.setItem("token", data.accessToken);
       setToken(data.accessToken);
-      setisLogin(true);
       history.push("/");
 
     };
@@ -37,17 +35,18 @@ const App = () => {
   
   const logOut = () => {
     sessionStorage.removeItem("token");
-    setisLogin(false);
     history.push('/login')
   };
 
   if (!token || token === "undefined") {
     history.push('/login');
-  }
+  } 
+
+
 
   return (
       <Fragment>
-        {isLogin && <Header logOut={logOut} />}
+         <Header logOut={logOut}/>
         <Switch>
           <Route exact path={"/"} component={Home} />
           <Route path={"/candidate/:id"} component={Candidate} />
@@ -62,7 +61,7 @@ const App = () => {
           </Route>
         </Switch>
 
-        {isLogin && <Footer />}
+        <Footer />
       </Fragment>
   );
 };

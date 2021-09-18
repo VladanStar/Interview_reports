@@ -9,7 +9,13 @@ import "./Candidate.css";
 const CandidatesUI = ({ candidates, value, search }) => {
   const img =
     "https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif";
-  const filteredCandidates = FilterUser(candidates, value);
+    var filteredCandidates = [];
+    console.log(candidates);
+
+    if (candidates && candidates.length > 0 && Array.isArray(candidates)) {
+      filteredCandidates = FilterUser(candidates, value);
+  }
+    
   if (filteredCandidates.length === 0) {
     return (
       <main>
@@ -18,6 +24,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
       </main>
     );
   }
+  
   return (
     <main>
       <Container>

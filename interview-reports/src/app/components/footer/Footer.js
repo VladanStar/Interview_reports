@@ -1,8 +1,13 @@
 import React from "react";
 import "./Footer.css"
 import {Container} from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+    let location = useLocation();
+  if(location.pathname === "/login") {
+     return <div></div>
+  }
   return(
       <footer>
           <Container>

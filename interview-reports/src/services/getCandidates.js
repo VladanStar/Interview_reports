@@ -1,7 +1,7 @@
 const token = sessionStorage.getItem("token");
 
  const getCandidates = async () => {
-    const response = await fetch("http://localhost:3333/660/api/candidates", {
+    const response = await fetch("http://localhost:3333/api/candidates", {
         headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
