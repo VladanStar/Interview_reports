@@ -8,7 +8,7 @@ const Header = ({ logOut }) => {
     <header>
       <Navbar className="navStyle" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Interview Book</Navbar.Brand>
+          <Navbar.Brand href="#home" className="IntBook">Interview Book</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"

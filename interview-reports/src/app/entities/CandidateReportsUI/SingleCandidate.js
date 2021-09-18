@@ -36,7 +36,7 @@ const SingleCandidate = ({ candidate, reports }) => {
           </Col>
         </Row>
         <Table className="mt-5">
-          <thead>
+          <thead className="opacity">
             <tr>
               <th>#</th>
               <th>Company</th>
