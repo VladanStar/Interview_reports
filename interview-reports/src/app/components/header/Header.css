@@ -5,3 +5,9 @@
     padding-left: 10%;
     padding-right: 10%;
 }
+button {
+    background-color: khaki;
+    color: seagreen;
+    border-radius: 10px;
+    margin-left: 20px;
+}
