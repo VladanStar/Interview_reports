@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../src/img/4.jpg)!important;
-  background-repeat: repeat-x repeat-y;
   background-position: center center;
   background-attachment: fixed;
   background-size: contain;
