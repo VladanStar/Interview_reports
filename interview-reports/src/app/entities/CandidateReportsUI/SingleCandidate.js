@@ -42,6 +42,7 @@ const SingleCandidate = ({ candidate, reports }) => {
               <th>Company</th>
               <th>Interview date</th>
               <th>Status</th>
+              <th>Modals</th>
             </tr>
             {reports.map((report, index) => {
                 return(
@@ -49,7 +50,8 @@ const SingleCandidate = ({ candidate, reports }) => {
                         <th>{index+1}</th>
                         <th>{report.companyName}</th>
                         <th>{SetDate(report.interviewDate)}</th>
-                        <th>{report.status} <button onClick={()=> {setModalObj(report); setIsView(true)}}>Show modal</button></th>
+                        <th>{report.status}</th>
+                        <th>{<button onClick={()=>{setModalObj(report); setIsView(true)}}>Show modal</button>}</th>
                     </tr>
                 )
             })}

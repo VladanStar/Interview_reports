@@ -1,4 +1,13 @@
-.leftM{
-    margin-left: 20px;
-    color: white;
-    }
+
+th {
+    background-color: khaki!important;   
+    color: seagreen;
+}
+
+p {
+    background-color: khaki;
+    color: seagreen;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
