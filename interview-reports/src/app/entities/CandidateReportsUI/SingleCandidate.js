@@ -4,6 +4,8 @@ import Image from "react-bootstrap/Image";
 import SetDate from "../../../Data/SetDate";
 import Modalset from "../../components/modal/Modal";
 import "./SingleCandidate.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const SingleCandidate = ({ candidate, reports }) => {
   const [isView, setIsView] = useState(false);
@@ -51,7 +53,7 @@ const SingleCandidate = ({ candidate, reports }) => {
                         <th>{report.companyName}</th>
                         <th>{SetDate(report.interviewDate)}</th>
                         <th>{report.status}</th>
-                        <th>{<button onClick={()=>{setModalObj(report); setIsView(true)}}>Show modal</button>}</th>
+                        <th>{<button onClick={()=>{setModalObj(report); setIsView(true)}}><FontAwesomeIcon icon={faEye}/></button>}</th>
                     </tr>
                 )
             })}
