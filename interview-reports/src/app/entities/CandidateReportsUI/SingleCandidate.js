@@ -44,7 +44,7 @@ const SingleCandidate = ({ candidate, reports }) => {
               <th>Company</th>
               <th>Interview date</th>
               <th>Status</th>
-              <th>Modals</th>
+              <th>View</th>
             </tr>
             {reports.map((report, index) => {
                 return(
