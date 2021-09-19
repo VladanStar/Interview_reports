@@ -20,7 +20,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
     return (
       <main>
         <SearchBar value={value} search={search} />
-        <h1>No results</h1>
+        <h1>No results, Refresh page, please</h1>
       </main>
     );
   }

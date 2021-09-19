@@ -12,3 +12,9 @@ img {
   .BackgroundColor {
     background-color: seagreen!important;
   }
+  h1 {
+    color:seagreen;
+    background-color: khaki;
+    padding: 20px;
+    text-align: center;
+  }
