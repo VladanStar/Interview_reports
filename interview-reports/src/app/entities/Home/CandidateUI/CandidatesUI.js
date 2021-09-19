@@ -8,7 +8,7 @@ import "./Candidate.css";
 
 const CandidatesUI = ({ candidates, value, search }) => {
   const img =
-    "https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif";
+    "https://cdn4.iconfinder.com/data/icons/seo-and-digital-marketing-4-1/128/165-512.png";
     var filteredCandidates = [];
     console.log(candidates);
 
@@ -53,7 +53,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
                       className="p-5"
                     />
 
-                    <Card.Body>
+                    <Card.Body className="BackgroundColor">
                       <Card.Title className="mb-3">{candidate.name}</Card.Title>
                       <Card.Text>{candidate.email}</Card.Text>
                     </Card.Body>

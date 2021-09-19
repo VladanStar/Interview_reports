@@ -15,7 +15,7 @@ const SingleCandidate = ({ candidate, reports }) => {
   }
   console.log(modalObj)
   const img =
-    "https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif";
+    "https://cdn4.iconfinder.com/data/icons/seo-and-digital-marketing-4-1/128/165-512.png";
   return (
     <main>
         {isView && <Modalset modalObj={modalObj} closed={closedModal}/>}
