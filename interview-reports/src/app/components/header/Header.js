@@ -15,10 +15,10 @@ const Header = ({ logOut }) => {
           <Navbar.Brand href="#home" className="IntBook">Interview Book</Navbar.Brand>
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="d-flex justify-content-end col-lg-1" 
+            className="d-flex justify-content-end" 
           >
             <Nav className="d-flex align-items-center">
-              <Link to="" className="float">
+              <Link to="/" className="float">
                 Candidates
               </Link>
               <button onClick={logOut}>Logout</button>
