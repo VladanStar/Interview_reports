@@ -15,6 +15,13 @@ img {
   h1 {
     color:seagreen;
     background-color: khaki;
-    padding: 20px;
+    padding:initial;
     text-align: center;
+    opacity: 0.9;
+    width: 100%;
+  }
+  .noResult {
+    position:absolute!important;
+    text-align: center;
+    margin: auto;
   }

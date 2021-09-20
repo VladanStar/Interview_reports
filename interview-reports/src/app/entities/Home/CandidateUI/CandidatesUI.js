@@ -19,8 +19,8 @@ const CandidatesUI = ({ candidates, value, search }) => {
   if (filteredCandidates.length === 0) {
     return (
       <main>
-        <SearchBar value={value} search={search} />
-        <h1>No results, Refresh page, please</h1>
+        <SearchBar className="noResult" value={value} search={search} />
+        <h1>Don't worry, just Click F5 to refresh page, please.</h1>
       </main>
     );
   }
