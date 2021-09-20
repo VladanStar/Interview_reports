@@ -13,14 +13,13 @@ const Header = ({ logOut }) => {
       <Navbar className="navStyle" expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="IntBook">Interview Book</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="d-flex justify-content-end"
+            className="d-flex justify-content-end col-lg-1" 
           >
             <Nav className="d-flex align-items-center">
               <Link to="/" className="float">
-                Home
+                Candidates
               </Link>
               <button onClick={logOut}>Logout</button>
               {/* <Nav.Link href="/">Home</Nav.Link>
