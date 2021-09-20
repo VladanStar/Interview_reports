@@ -10,7 +10,8 @@ form {
     border-radius: 20px;
     box-shadow: 1px 2px 41px -7px rgba(0,0,0,0.75);
     background-color: seagreen;
-    width: 50%;
+    width: 30%;
+    opacity: 0.9;
 }
 
 .input {

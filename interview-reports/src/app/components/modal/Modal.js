@@ -8,7 +8,7 @@ const Modalset = ({ modalObj, closed }) => {
   return (
     <>
       <Modal show={true} >
-        <Modal.Header closeButton onHide={closed} >
+        <Modal.Header className="header" closeButton onHide={closed} >
           <h2>{modalObj.candidateName}</h2>
         </Modal.Header>
         <Modal.Body className="body">

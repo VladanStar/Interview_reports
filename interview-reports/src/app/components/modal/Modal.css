@@ -18,3 +18,7 @@
   .notes{
       margin:20px;
   }
+  .header {
+      background-color: seagreen!important;
+      color: khaki!important;
+  }
