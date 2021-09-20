@@ -18,7 +18,7 @@ const Header = ({ logOut }) => {
             className="d-flex justify-content-end col-lg-1" 
           >
             <Nav className="d-flex align-items-center">
-              <Link to="/" className="float">
+              <Link to="" className="float">
                 Candidates
               </Link>
               <button onClick={logOut}>Logout</button>
