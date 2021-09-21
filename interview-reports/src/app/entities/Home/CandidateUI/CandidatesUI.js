@@ -20,7 +20,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
     return (
       <main>
         <SearchBar className="noResult" value={value} search={search} />
-        <h1>Don't worry, just Click F5 to refresh page, please.</h1>
+        <h1>There is no result but don't worry, just Click F5 to refresh page, please.</h1>
       </main>
     );
   }
@@ -33,7 +33,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
           {filteredCandidates.map((candidate, index) => {
             return (
               <Col
-                xs={12}
+                xs={8}
                 md={6}
                 xl={4}
                 className="d-flex justify-content-center mb-5"
