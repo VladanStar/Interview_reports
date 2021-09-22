@@ -27,7 +27,7 @@ const CandidatesUI = ({ candidates, value, search }) => {
   
   return (
     <main>
-      <Container>
+      <Container xs={12} md={8} lg={4}>
         <SearchBar value={value} search={search} />
         <Row className="text-center">
           {filteredCandidates.map((candidate, index) => {

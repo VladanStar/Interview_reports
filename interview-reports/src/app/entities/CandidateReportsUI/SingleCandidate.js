@@ -21,16 +21,16 @@ const SingleCandidate = ({ candidate, reports }) => {
         {isView && <Modalset modalObj={modalObj} closed={closedModal}/>}
       <Container>
         <Row>
-          <Col xs={12} md={12} lg={4}>
-            <Image src={img} alt="no img" fluid />
+          <Col xs={12} md={8} lg={4}>
+            <Image src={img} alt="no img" fluid xs={12} md={8} lg={4}/>
           </Col>
-          <Col className="opacity" xs={12} md={12} lg={4}>
+          <Col className="opacity" xs={12} md={8} lg={4}>
             <p>Name:</p>
             <p className="leftM">{candidate.name}</p>
             <p>Email:</p>
             <p className="leftM">{candidate.email}</p>
           </Col>
-          <Col className="opacity" xs={12} md={12} lg={4}>
+          <Col className="opacity" xs={12} md={8} lg={4}>
             <p>Date of birth:</p>
             <p className="leftM">{SetDate(candidate.birthday)}</p>
             <p>Education:</p>
