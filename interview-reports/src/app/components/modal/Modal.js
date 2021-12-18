@@ -24,7 +24,7 @@ const Modalset = ({ modalObj, closed }) => {
           </div>
           <div className="notes">
               <p>Notes:</p>
-            <h7>{modalObj.note}</h7>
+            <h6>{modalObj.note}</h6>
           </div>
         </Modal.Body>
       </Modal>
